@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.flex-center, body, .conatiner, .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  padding: 1rem;
+  min-height: 30rem;
+  background-image: url(./images/1.jpg);
+  border-radius: 3rem;
+  background-position: center;
+  background-size: auto 120%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 3rem;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.06);
+  margin: 0 .2rem;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-transition: background-size 1s ease , width .5s ease;
+  transition: background-size 1s ease , width .5s ease;
+  cursor: pointer;
+}
+
+.card:nth-child(2) {
+  background-image: url(./images/2.jpg);
+}
+
+.card:nth-child(3) {
+  background-image: url(./images/3.jpg);
+}
+
+.card::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.6)));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.bunner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 18rem;
+  bottom: 1rem;
+  overflow-x: hidden;
+  -webkit-transition: bottom .5s ease , left .5s ease;
+  transition: bottom .5s ease , left .5s ease;
+}
+
+.icon {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin-right: .6rem;
+  background: white;
+}
+
+.title, .desc {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.title {
+  color: white;
+  font-weight: 700;
+}
+
+.desc {
+  color: rgba(255, 255, 255, 0.733);
+}
+
+.card.active {
+  width: 30rem;
+  -webkit-box-flex: 1rem;
+      -ms-flex-positive: 1rem;
+          flex-grow: 1rem;
+  background-size: auto 100%;
+}
+
+.card.active .bunner {
+  left: 1.5rem;
+  bottom: 1.5rem;
+}
+
+.card.active .bunner div > * {
+  opacity: 1;
+}
+/*# sourceMappingURL=index.css.map */

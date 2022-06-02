@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expand - Card</title>
+    <!-- CDN Fontawsome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <div class="conatiner">
+      <div class="card  ">
+        <div class="bunner">
+           <span class="icon"><i class="fa fa-paw"></i></span>
+           <div>
+             <p class="title">Animal </p>
+             <small class="desc">Lorem ipsum dolor sit.</small>
+           </div>
+        </div>
+      </div>
+      <div class="card  ">
+        <div class="bunner">
+           <span class="icon"><i class="fa fa-building"></i></span>
+           <div>
+             <p class="title">Building</p>
+             <small class="desc">Lorem ipsum dolor sit.</small>
+           </div>
+        </div>
+      </div>
+      <div class="card  ">
+        <div class="bunner">
+           <span class="icon"><i class="fa fa-phone"></i></span>
+           <div>
+             <p class="title">Phone</p>
+             <small class="desc">Lorem ipsum dolor sit.</small>
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+
+
+const cards = document.querySelectorAll('.card') ;
+let activeCard ; 
+
+
+
+
+
+        function makeCardActive(){
+          activeCard && activeCard.classList.remove('active') ;
+
+          this.classList.add('active') ; 
+
+          activeCard = this ; 
+        }
+
+
+
+        cards.forEach( card => card.addEventListener('click' , makeCardActive ))
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
